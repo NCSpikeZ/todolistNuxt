@@ -3,7 +3,7 @@ el-container
     el-row
     el-col
         el-card
-        h1 Modifier la tâche
+        h1 Task editing
         el-form(:model="editedTask" label-position="top" ref="editedTaskForm" :rules="taskFormRules" size="mini")
             el-form-item(label="Titre" prop="title")
             el-input(v-model="editedTask.title" placeholder="Entrez le titre de la tâche")

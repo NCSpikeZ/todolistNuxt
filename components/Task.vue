@@ -24,6 +24,7 @@ export default {
       this.$emit('toggleTaskDone');
     },
     editTask() {
+      this.$router.push(`/edit-task/${this.task.id}`);
     }
   }
 };
