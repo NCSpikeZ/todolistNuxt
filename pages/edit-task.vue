@@ -15,38 +15,37 @@ el-container
 
 <script>
 export default {
-    data() {
+data() {
     return {
-        editedTask: {
+    editedTask: {
         id: null,
         title: '',
         description: ''
-        },
-        taskFormRules: {
+    },
+    taskFormRules: {
         title: [{ required: true, message: 'Veuillez entrer le titre de la tâche', trigger: 'blur' }],
         description: [{ required: true, message: 'Veuillez entrer la description de la tâche', trigger: 'blur' }]
-        }
+    }
     };
-    },
-    created() {
+},
+created() {
     const taskId = this.$route.params.id;
-
+    
     this.editedTask.id = taskId;
     this.editedTask.title = 'Titre de la tâche';
     this.editedTask.description = 'Description de la tâche';
-    },
-    methods: {
+},
+methods: {
     saveChanges() {
-        this.$refs.editedTaskForm.validate((valid) => {
+    this.$refs.editedTaskForm.validate((valid) => {
         if (valid) {
-            console.log('Modifications enregistrées :', this.editedTask);
-            this.$router.push('/task-list');
+        console.log('Modifications enregistrées :', this.editedTask);
+        this.$router.push('/task-list');
         } else {
-            return false;
+        return false;
         }
-        });
+    });
     }
-    }
+}
 };
 </script>
-

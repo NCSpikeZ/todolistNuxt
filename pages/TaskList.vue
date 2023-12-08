@@ -1,11 +1,11 @@
 <template lang="pug">
 el-container(:style="{ height: '100vh' }")
   el-main
-    el-row(:align="center", :justify="center", class="tasks-container")
-      el-col(:span="24")
+    el-row
+      el-col
         h1 Ma liste de tâches
-        el-row(:justify="center")
-          el-col(:span="16")
+        el-row
+          el-col
             div.tasks-list
               Task(v-for="(task, index) in tasks" :key="index" :task="task" @toggleTaskDone="toggleTaskDone(index)")
 </template>
@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       tasks: [
-        { title: 'Faire les courses', description: 'Acheter des légumes et du lait', done: false },
-        { title: 'Ceci est une tâche', description: 'Ceci est une description', done: false },
+        { id:1, title: 'Faire les courses', description: 'Acheter des légumes et du lait', done: false },
+        { id:2, title: 'Ceci est une tâche', description: 'Ceci est une description', done: false },
       ]
     };
   },

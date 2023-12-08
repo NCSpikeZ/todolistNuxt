@@ -1,6 +1,6 @@
 <template lang="pug">
 div.tasks-container
-  el-row(:gutter="10", :align="middle")
+  el-row(:gutter="10")
     el-col(:span="20")
       h3(:class="{ 'task-done': task.done }") {{ task.title }}
       p(:class="{ 'task-done': task.done }") {{ task.description }}
