@@ -1,7 +1,7 @@
 <template lang="pug">
 el-container
     el-row
-    el-col(:span="12")
+    el-col
         el-card
         h1 Modifier la tâche
         el-form(:model="editedTask" label-position="top" ref="editedTaskForm" :rules="taskFormRules" size="mini")
